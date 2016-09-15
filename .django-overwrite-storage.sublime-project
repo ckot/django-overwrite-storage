@@ -8,7 +8,9 @@
                 "dist",
                 "*.egg-info",
                 ".eggs",
-                "build"
+                "build",
+                "__pycache__",
+                ".tox"
             ]
 		}
 	]
