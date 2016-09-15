@@ -93,3 +93,6 @@ ENV/
 
 # sqlite
 *.sqlite3
+
+# project-related stuff
+tests/uploaded_files
