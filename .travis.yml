@@ -1,0 +1,24 @@
+language: python
+python: 3.5
+env:
+  - TOX_ENV=py27-django17
+  - TOX_ENV=py27-django18
+  - TOX_ENV=py27-django19
+  - TOX_ENV=py27-django110
+  - TOX_ENV=py34-django17
+  - TOX_ENV=py34-django18
+  - TOX_ENV=py34-django19
+  - TOX_ENV=py34-django110
+  - TOX_ENV=pypy-django17
+  - TOX_ENV=pypy-django18
+  - TOX_ENV=pypy-django19
+  - TOX_ENV=pypy-django110
+# command to install dependencies
+install:
+  - pip install tox
+  - pip install coveralls
+# command to run tests
+script:
+  - tox -e $TOX_ENV
+# containers
+sudo: false
