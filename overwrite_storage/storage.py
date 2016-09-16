@@ -12,7 +12,9 @@ class OverwriteStorage(FileSystemStorage):
     #     super(OverwriteStorage, self).__init__(*args, **kwargs)
 
     def get_available_name(self, name, max_length=None):
-        """deletes pre-existing file preventing filename mangling"""
+        """deletes pre-existing file with same name
+
+        preventing filename mangling"""
         if self.exists(name):
             os.remove(os.path.join(self.location, name))
         return name
