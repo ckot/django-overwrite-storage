@@ -8,22 +8,11 @@ from . import models
 
 class TestOverwriteStorage(TestCase):
 
-    @classmethod
-    def setUpClass(cls):
-        pass
-
-    @classmethod
-    def tearDownClass(cls):
-        pass
-
     def setUp(self):
         self.text_file1 = "tests/data/text_file1.txt"
         self.text_file2 = "tests/data/text_file2.txt"
         self.png_file1 = "tests/data/dark_orange.png"
         self.png_file2 = "tests/data/dark_green.png"
-
-    def tearDown(self):
-        pass
 
     def get_file_name(self, file_path):
         return os.path.basename(file_path)
