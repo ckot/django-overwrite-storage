@@ -1,5 +1,4 @@
 import os
-import sys
 
 from setuptools import find_packages, setup
 
@@ -10,21 +9,6 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
-
-
-CLASSIFIERS = [
-    "Private :: Do Not Upload"
-    # "Programming Language :: Python",
-    # "Programming Language :: Python :: 2",
-    # "Programming Language :: Python :: 2.7",
-]
-
-# if "--public" not in sys.argv:
-#     CLASSIFIERS.append("Private :: Do Not Upload")
-# else:
-#     sys.argv.remove("--public")
-# print CLASSIFIERS
-# sys.exit(0)
 
 setup(
     name='django-overwrite-storage',
@@ -44,5 +28,7 @@ setup(
     url='https://github.com/ckot/django-overwrite-storage/',
     author='Scott Silliman',
     author_email='scott.t.silliman@gmail.com',
-    classifiers=CLASSIFIERS
+    classifiers=[
+        "Private :: Do not Upload"
+    ]
 )
