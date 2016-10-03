@@ -15,12 +15,6 @@ setup(
     version=__version__,
     packages=find_packages(exclude=["tests"]),
     include_package_data=True,
-    install_requires=[
-        "django>=1.7,<=1.10"
-    ],
-    tests_require=[
-        "tox"
-    ],
     test_suite="runtests.main",
     license='MIT',
     description='Django app which provides a storage class which clobbers upload files with the same name',
